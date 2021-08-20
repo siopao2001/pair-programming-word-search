@@ -50,7 +50,7 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
- it("should return Matrix has now words if array is empty", function() {
+ it("should return Matrix has no words if array is empty", function() {
     const result = wordSearch([
       
     ], 'CROCODILE')
