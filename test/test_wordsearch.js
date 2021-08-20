@@ -20,7 +20,7 @@ describe("#wordSearch()", function() {
     assert.isFalse(result);
   });
 
-  it("should return true if the word is present", function() {
+  it("should return true if the word is present horizontally", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -35,4 +35,27 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+  it("should return true if the word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'R', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'O', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'C', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'O', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'D', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'I', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'L', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'E', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'CROC')
+
+    assert.isTrue(result);
+  });
+ it("should return Matrix has now words if array is empty", function() {
+    const result = wordSearch([
+      
+    ], 'CROCODILE')
+
+    assert.equal(result, "Matrix has no words");
+  });
+
 });
